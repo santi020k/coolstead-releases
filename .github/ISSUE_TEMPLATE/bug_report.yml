@@ -1,0 +1,30 @@
+name: Installation or release issue
+description: Report a reproducible download, installation, or update problem.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not run an asset whose digest or macOS signature verification fails. Report suspected security issues privately.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: release
+    attributes:
+      label: Release and asset
+      description: For example, v1.0.0 and Coolstead-1.0.0.dmg.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, Mac model, and direct-download or Homebrew installation.
+    validations:
+      required: true
